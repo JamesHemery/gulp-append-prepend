@@ -1,8 +1,76 @@
 {
-  "name": "gulp-append-prepend",
-  "version": "1.0.0",
+  "_args": [
+    [
+      {
+        "raw": "gulp-append-prepend",
+        "scope": null,
+        "escapedName": "gulp-append-prepend",
+        "name": "gulp-append-prepend",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "D:\\Dev\\Web\\local\\WebBoilerplate"
+    ]
+  ],
+  "_from": "gulp-append-prepend@latest",
+  "_id": "gulp-append-prepend@1.0.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/gulp-append-prepend",
+  "_nodeVersion": "4.4.7",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/gulp-append-prepend-1.0.0.tgz_1468201602965_0.12622159020975232"
+  },
+  "_npmUser": {
+    "name": "noczcore",
+    "email": "noczcore@gmail.com"
+  },
+  "_npmVersion": "3.10.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "gulp-append-prepend",
+    "scope": null,
+    "escapedName": "gulp-append-prepend",
+    "name": "gulp-append-prepend",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/gulp-append-prepend/-/gulp-append-prepend-1.0.0.tgz",
+  "_shasum": "aae33f83e56ab9f372ab1bf748839e76040b6496",
+  "_shrinkwrap": null,
+  "_spec": "gulp-append-prepend",
+  "_where": "D:\\Dev\\Web\\local\\WebBoilerplate",
+  "author": {
+    "name": "NoczCore",
+    "url": "https://github.com/NoczCore/"
+  },
+  "bugs": {
+    "url": "https://github.com/NoczCore/gulp-append-prepend/issues"
+  },
+  "dependencies": {
+    "fs": "0.0.2",
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.1"
+  },
   "description": "A simple gulp plugin to append and prepend files.",
-  "main": "index.js",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "aae33f83e56ab9f372ab1bf748839e76040b6496",
+    "tarball": "https://registry.npmjs.org/gulp-append-prepend/-/gulp-append-prepend-1.0.0.tgz"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "gitHead": "395af90455f19953e18bc1976a13e4eec9de5c3f",
+  "homepage": "https://github.com/NoczCore/gulp-append-prepend",
   "keywords": [
     "gulpplugin",
     "gulp",
@@ -10,30 +78,26 @@
     "prepend",
     "insert"
   ],
-  "homepage": "https://github.com/NoczCore/gulp-append-prepend",
-  "author": {
-    "name": "NoczCore",
-    "url": "https://github.com/NoczCore/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/NoczCore/gulp-append-prepend.git"
-  },
-  "bugs": {
-    "url": "https://github.com/NoczCore/gulp-append-prepend/issues"
-  },
   "licenses": [
     {
       "type": "MIT",
       "url": "https://github.com/NoczCore/gulp-append-prepend/blob/master/LICENSE"
     }
   ],
-  "engines": {
-    "node": ">= 0.10.0"
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "noczcore",
+      "email": "noczcore@gmail.com"
+    }
+  ],
+  "name": "gulp-append-prepend",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/NoczCore/gulp-append-prepend.git"
   },
-  "dependencies": {
-    "fs": "0.0.2",
-    "gulp-util": "^3.0.7",
-    "through2": "^2.0.1"
-  }
+  "scripts": {},
+  "version": "1.0.0"
 }

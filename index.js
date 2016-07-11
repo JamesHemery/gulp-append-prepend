@@ -37,9 +37,9 @@ function insert(texts, separator, type) {
     var buffers = [];
     for (i = 0; i < texts.length; i++) {
         if (type == "prepend") {
-            buffers.push(new Buffer(separator + texts[i].trim()));
+            buffers.push(new Buffer(texts[i].trim()+separator));
         }else if(type == "append") {
-            buffers.push(new Buffer(texts[i].trim() + separator));
+            buffers.push(new Buffer(separator+texts[i].trim()));
         }
     }
 
@@ -51,13 +51,13 @@ function insert(texts, separator, type) {
 
         if (file.isBuffer()) {
             var concat = [];
-            if (type == "prepend") {
+            if (type == "append") {
                 concat.push(file.contents);
             }
             for(i = 0; i < buffers.length; i++){
                 concat.push(buffers[i]);
             }
-            if (type == "append") {
+            if (type == "prepend") {
                 concat.push(file.contents);
             }
 
