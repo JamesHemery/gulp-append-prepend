@@ -15,11 +15,11 @@ Then, add it to your gulpfile.js:
 var gap = require('gulp-append-prepend');
 
 gulp.task('myawesometask', function(){
-  gulp.src('index.html')
-    .pipe(gap.appendFile('header.html'))
-    .pipe(gap.appendText('<!-- HEADER -->'))
-    .pipe(gap.prependText('<!-- FOOTER -->'))
-    .pipe(gap.prependFile('footer.html'))
+    gulp.src('index.html')
+    .pipe(gap.prependFile('header.html'))
+    .pipe(gap.prependText('<!-- HEADER -->'))
+    .pipe(gap.appendText('<!-- FOOTER -->'))
+    .pipe(gap.appendFile('footer.html'))
     .pipe(gulp.dest('www/'));
 });
 ```
