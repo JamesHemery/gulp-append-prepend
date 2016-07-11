@@ -1,0 +1,39 @@
+{
+  "name": "gulp-append-prepend",
+  "version": "1.0.0",
+  "description": "A simple gulp plugin to append and prepend files.",
+  "main": "index.js",
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "append",
+    "prepend",
+    "insert"
+  ],
+  "homepage": "https://github.com/NoczCore/gulp-append-prepend",
+  "author": {
+    "name": "NoczCore",
+    "url": "https://github.com/NoczCore/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/NoczCore/gulp-append-prepend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NoczCore/gulp-append-prepend/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/NoczCore/gulp-append-prepend/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "dependencies": {
+    "fs": "0.0.2",
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.1"
+  }
+}
