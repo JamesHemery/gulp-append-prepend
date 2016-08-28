@@ -5,7 +5,7 @@ Simple Gulp plugin.
 ##Usage
 
 First, install gulp-append-prepend as a development dependency:
-```bash
+```
 npm install gulp-append-prepend --save-dev
 ```
 
