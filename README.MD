@@ -1,17 +1,17 @@
 # gulp-append-prepend
 
-Simple Gulp plugin for append or prepend.
+Simple Gulp plugin.
 
 ##Usage
 
 First, install gulp-append-prepend as a development dependency:
-```
+```bash
 npm install gulp-append-prepend --save-dev
 ```
 
 Then, add it to your gulpfile.js:
 
-```
+```javascript
 var gap = require('gulp-append-prepend');
 
 gulp.task('myawesometask', function(){
