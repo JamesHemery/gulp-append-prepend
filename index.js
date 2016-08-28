@@ -1,6 +1,6 @@
 var through = require('through2');
 var gutil = require('gulp-util');
-var fs = require('fs');
+var read = require('read-file');
 var PluginError = gutil.PluginError;
 
 const PLUGIN_NAME = 'gulp-append-prepend';
@@ -12,7 +12,7 @@ function filesGetContents(filepaths){
 
     var filesContents = [];
     for(i = 0; i < filepaths.length; i++){
-        filesContents.push(fs.readFileSync(filepaths[i], "utf8"));
+        filesContents.push(read.sync(filepaths[i], 'utf8'));
     }
     return filesContents;
 }
