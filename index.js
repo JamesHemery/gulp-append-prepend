@@ -30,7 +30,7 @@ function insert(texts, separator, type) {
         throw new PluginError(PLUGIN_NAME, 'Missing type !');
     }
 
-    if (!separator) {
+    if (!separator && separator !== '') {
         separator = "\n";
     }
 
