@@ -33,7 +33,7 @@ This example works with html but you can use any type of file.
 - ``prependText(text, separator)`` The text can be an array. The separator is optional by default is "\n".
 
 ## Licence
-This plugin is released under the [MIT licence](https://raw.githubusercontent.com/NoczCore/gulp-append-prepend/master/LICENCE).
+This plugin is released under the [MIT licence](https://raw.githubusercontent.com/JamesHemery/gulp-append-prepend/master/LICENCE).
 
 ## Disclaimer
 I am sorry for my poor English. Feel free to make changes in this README.
