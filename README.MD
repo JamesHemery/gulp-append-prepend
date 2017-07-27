@@ -2,7 +2,7 @@
 
 Simple Gulp plugin.
 
-##Usage
+## Usage
 
 First, install gulp-append-prepend as a development dependency:
 ```
@@ -26,14 +26,14 @@ gulp.task('myawesometask', function(){
 
 This example works with html but you can use any type of file.
 
-##Methods
+## Methods
 - ``appendFile(filepath, separator)`` The filepath can be an array. The separator is optional by default is "\n".
 - ``prependFile(filepath, separator)`` The filepath can be an array. The separator is optional by default is "\n".
 - ``prependText(text, separator)`` The text can be an array. The separator is optional by default is "\n".
 - ``prependText(text, separator)`` The text can be an array. The separator is optional by default is "\n".
 
-##Licence
+## Licence
 This plugin is released under the [MIT licence](https://raw.githubusercontent.com/NoczCore/gulp-append-prepend/master/LICENCE).
 
-##Disclaimer
+## Disclaimer
 I am sorry for my poor English. Feel free to make changes in this README.
