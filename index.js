@@ -1,7 +1,7 @@
-var through = require('through2');
-var gutil = require('gulp-util');
-var read = require('read-file');
-var PluginError = gutil.PluginError;
+const through = require('through2');
+const gutil = require('gulp-util');
+const read = require('read-file');
+const PluginError = gutil.PluginError;
 
 const PLUGIN_NAME = 'gulp-append-prepend';
 
@@ -10,7 +10,7 @@ function filesGetContents(filepaths){
         filepaths = [filepaths];
     }
 
-    var filesContents = [];
+    const filesContents = [];
     for(i = 0; i < filepaths.length; i++){
         filesContents.push(read.sync(filepaths[i], 'utf8'));
     }
@@ -34,23 +34,23 @@ function insert(texts, separator, type) {
         separator = "\n";
     }
 
-    var buffers = [];
+    const buffers = [];
     for (i = 0; i < texts.length; i++) {
         if (type == "prepend") {
-            buffers.push(new Buffer(texts[i].trim()+separator));
+            buffers.push(new Buffer(texts[i].trim() + separator));
         }else if(type == "append") {
-            buffers.push(new Buffer(separator+texts[i].trim()));
+            buffers.push(new Buffer(separator + texts[i].trim()));
         }
     }
 
-    var stream = through.obj(function(file, enc, cb) {
+    const stream = through.obj(function(file, enc, cb) {
         if (file.isStream()) {
-            this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported!'));
+            this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported !'));
             return cb();
         }
 
         if (file.isBuffer()) {
-            var concat = [];
+            const concat = [];
             if (type == "append") {
                 concat.push(file.contents);
             }
