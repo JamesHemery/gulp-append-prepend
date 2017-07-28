@@ -37,15 +37,15 @@ function insert(texts, separator, type) {
     const buffers = [];
     for (i = 0; i < texts.length; i++) {
         if (type == "prepend") {
-            buffers.push(new Buffer(texts[i].trim()+separator));
+            buffers.push(new Buffer(texts[i].trim() + separator));
         }else if(type == "append") {
-            buffers.push(new Buffer(separator+texts[i].trim()));
+            buffers.push(new Buffer(separator + texts[i].trim()));
         }
     }
 
     const stream = through.obj(function(file, enc, cb) {
         if (file.isStream()) {
-            this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported!'));
+            this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported !'));
             return cb();
         }
 
