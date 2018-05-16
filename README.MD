@@ -29,7 +29,7 @@ This example works with html but you can use any type of file.
 ## Methods
 - ``appendFile(filepath, separator)`` The filepath can be an array. The separator is optional by default is "\n".
 - ``prependFile(filepath, separator)`` The filepath can be an array. The separator is optional by default is "\n".
-- ``prependText(text, separator)`` The text can be an array. The separator is optional by default is "\n".
+- ``appendText(text, separator)`` The text can be an array. The separator is optional by default is "\n".
 - ``prependText(text, separator)`` The text can be an array. The separator is optional by default is "\n".
 
 ## Licence
