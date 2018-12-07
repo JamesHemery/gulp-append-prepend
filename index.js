@@ -1,7 +1,6 @@
 const through = require('through2');
-const gutil = require('gulp-util');
 const read = require('read-file');
-const PluginError = gutil.PluginError;
+const PluginError = require('plugin-error');
 
 const PLUGIN_NAME = 'gulp-append-prepend';
 
