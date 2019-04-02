@@ -10,7 +10,7 @@ function filesGetContents(filepaths){
     }
 
     const filesContents = [];
-    for(i = 0; i < filepaths.length; i++){
+    for (let i = 0; i < filepaths.length; i++) {
         filesContents.push(read.sync(filepaths[i], 'utf8'));
     }
     return filesContents;
@@ -25,7 +25,7 @@ function insert(texts, separator, type) {
         texts = [texts];
     }
 
-    if (type != "append" && type != "prepend") {
+    if (type !== "append" && type !== "prepend") {
         throw new PluginError(PLUGIN_NAME, 'Missing type !');
     }
 
@@ -34,11 +34,11 @@ function insert(texts, separator, type) {
     }
 
     const buffers = [];
-    for (i = 0; i < texts.length; i++) {
-        if (type == "prepend") {
-            buffers.push(new Buffer(texts[i].trim() + separator));
-        }else if(type == "append") {
-            buffers.push(new Buffer(separator + texts[i].trim()));
+    for (let i = 0; i < texts.length; i++) {
+        if (type === "prepend") {
+            buffers.push(Buffer.from(texts[i].trim() + separator));
+        } else if (type === "append") {
+            buffers.push(Buffer.from(separator + texts[i].trim()));
         }
     }
 
@@ -50,13 +50,13 @@ function insert(texts, separator, type) {
 
         if (file.isBuffer()) {
             const concat = [];
-            if (type == "append") {
+            if (type === "append") {
                 concat.push(file.contents);
             }
-            for(i = 0; i < buffers.length; i++){
+            for (let i = 0; i < buffers.length; i++) {
                 concat.push(buffers[i]);
             }
-            if (type == "prepend") {
+            if (type === "prepend") {
                 concat.push(file.contents);
             }
 
