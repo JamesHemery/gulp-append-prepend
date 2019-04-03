@@ -2,6 +2,10 @@
 
 Simple Gulp plugin.
 
+[![License:MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/JamesHemery/gulp-append-prepend/blob/master/LICENCE)
+[![npm](https://img.shields.io/npm/v/gulp-append-prepend.svg)](https://www.npmjs.com/package/gulp-append-prepend)
+[![Build](https://travis-ci.org/JamesHemery/gulp-append-prepend.svg)](https://travis-ci.org/JamesHemery/gulp-append-prepend)
+
 ## Usage
 
 First, install gulp-append-prepend as a development dependency:
