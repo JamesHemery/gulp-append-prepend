@@ -42,7 +42,7 @@
     "test": "mocha spec/*.js"
   },
   "engines": {
-    "node": ">= 4.0.0"
+    "node": ">=6"
   },
   "dependencies": {
     "read-file": "^0.2.0",
