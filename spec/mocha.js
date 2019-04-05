@@ -1,7 +1,7 @@
 // Mocha Specification Cases
 
 // Imports
-const assert = require('assert').strict;
+const assert = require('assert');
 const fs =     require('fs');
 const Vinyl =  require('vinyl');
 
@@ -23,20 +23,20 @@ describe('The gulp-append-prepend plugin', () => {
     it('is exported as an object', () => {
         const actual =   { type: typeof gap };
         const expected = { type: 'object' };
-        assert.deepEqual(actual, expected);
+        assert.deepStrictEqual(actual, expected);
     });
 
     it('contains the functions: appendFile(), prependFile(), appendText(), prependText()', () => {
         const names = ['appendFile', 'prependFile', 'appendText', 'prependText'];
         const actual =   { functions: Object.keys(gap).sort() };
         const expected = { functions: names.sort() };
-        assert.deepEqual(actual, expected);
+        assert.deepStrictEqual(actual, expected);
     });
 
     it('functions are the correct type', () => {
         const actual =   { types: Object.values(gap).map(v => typeof v) };
         const expected = { types: ['function', 'function', 'function', 'function'] };
-        assert.deepEqual(actual, expected);
+        assert.deepStrictEqual(actual, expected);
     });
 
 });
@@ -49,7 +49,7 @@ describe('The appendFile() function', () => {
         const handleFileFromStream = (file) => {
             const actual =   { page: file.contents.toString() };
             const expected = { page: page.body + '\n\n' + page.end };
-            assert.deepEqual(actual, expected);
+            assert.deepStrictEqual(actual, expected);
             done();
         };
         const stream = gap.appendFile('spec/fixture/page-end.html');
@@ -68,7 +68,7 @@ describe('The prependFile() function', () => {
         const handleFileFromStream = (file) => {
             const actual =   { page: file.contents.toString() };
             const expected = { page: page.begin + '\n' + page.body + '\n' };
-            assert.deepEqual(actual, expected);
+            assert.deepStrictEqual(actual, expected);
             done();
         };
         const stream = gap.prependFile('spec/fixture/page-begin.html');
@@ -87,7 +87,7 @@ describe('The appendText() function', () => {
         const handleFileFromStream = (file) => {
             const actual =   { page: file.contents.toString() };
             const expected = { page: page.body + '\n\n' + page.end };
-            assert.deepEqual(actual, expected);
+            assert.deepStrictEqual(actual, expected);
             done();
         };
         const stream = gap.appendText(page.end);
@@ -106,7 +106,7 @@ describe('The prependText() function', () => {
         const handleFileFromStream = (file) => {
             const actual =   { page: file.contents.toString() };
             const expected = { page: page.begin + '\n' + page.body + '\n' };
-            assert.deepEqual(actual, expected);
+            assert.deepStrictEqual(actual, expected);
             done();
         };
         const stream = gap.prependText(page.begin);
