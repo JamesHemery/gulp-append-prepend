@@ -1,6 +1,6 @@
 {
   "name": "gulp-append-prepend",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Simple Gulp plugin to append/prepend.",
   "main": "index.js",
   "keywords": [
