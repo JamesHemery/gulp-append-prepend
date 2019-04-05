@@ -10,7 +10,7 @@ function filesGetContents(filepaths){
     }
 
     const filesContents = [];
-    for (let i = 0; i < filepaths.length; i++) {
+    for (var i = 0; i < filepaths.length; i++) {
         filesContents.push(read.sync(filepaths[i], 'utf8'));
     }
     return filesContents;
@@ -34,7 +34,7 @@ function insert(texts, separator, type) {
     }
 
     const buffers = [];
-    for (let i = 0; i < texts.length; i++) {
+    for (var i = 0; i < texts.length; i++) {
         if (type === "prepend") {
             buffers.push(Buffer.from(texts[i].trim() + separator));
         } else if (type === "append") {
@@ -53,7 +53,7 @@ function insert(texts, separator, type) {
             if (type === "append") {
                 concat.push(file.contents);
             }
-            for (let i = 0; i < buffers.length; i++) {
+            for (var i = 0; i < buffers.length; i++) {
                 concat.push(buffers[i]);
             }
             if (type === "prepend") {
