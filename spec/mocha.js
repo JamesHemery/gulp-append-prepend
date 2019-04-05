@@ -8,6 +8,11 @@ const Vinyl =  require('vinyl');
 // Plugin
 const gap = require('../index.js');
 
+// Object.values polyfill for Node <= 6
+if(!Object.values) {
+    Object.values = (obj) => Object.keys(obj).map((k) => obj[k]);
+}
+
 // Data
 console.log('  Input files:');
 fs.readdirSync('spec/fixture').forEach(file => console.log('    spec/fixture/' + file));
