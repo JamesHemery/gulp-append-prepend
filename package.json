@@ -42,7 +42,7 @@
     "test": "mocha spec/*.js"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=4"
   },
   "dependencies": {
     "read-file": "^0.2.0",
@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "jshint": "^2.10.2",
-    "mocha": "^6.0.2",
+    "mocha": "^5.2.0",
     "vinyl": "~2.2.0"
   }
 }
