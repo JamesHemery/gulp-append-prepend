@@ -4,7 +4,7 @@ const PluginError = require('plugin-error');
 
 const PLUGIN_NAME = 'gulp-append-prepend';
 
-function filesGetContents(filepaths){
+function filesGetContents(filepaths) {
     if (!(filepaths instanceof Array)) {
         filepaths = [filepaths];
     }
@@ -17,11 +17,11 @@ function filesGetContents(filepaths){
 }
 
 function insert(texts, separator, type) {
-    if(!texts){
+    if (!texts) {
         throw new PluginError(PLUGIN_NAME, 'Missing text or path !');
     }
 
-    if (!(texts instanceof Array)) {
+    if (!Array.isArray(texts)) {
         texts = [texts];
     }
 
@@ -42,7 +42,7 @@ function insert(texts, separator, type) {
         }
     }
 
-    const stream = through.obj(function(file, enc, cb) {
+    const stream = through.obj(function (file, enc, cb) {
         if (file.isStream()) {
             this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported !'));
             return cb();
@@ -70,18 +70,18 @@ function insert(texts, separator, type) {
     return stream;
 }
 
-module.exports.appendFile = function(filepath, separator) {
+module.exports.appendFile = function (filepath, separator) {
     return insert(filesGetContents(filepath), separator, "append");
 };
 
-module.exports.prependFile = function(filepath, separator) {
+module.exports.prependFile = function (filepath, separator) {
     return insert(filesGetContents(filepath), separator, "prepend");
 };
 
-module.exports.appendText = function(text, separator) {
+module.exports.appendText = function (text, separator) {
     return insert(text, separator, "append");
 };
 
-module.exports.prependText = function(text, separator) {
+module.exports.prependText = function (text, separator) {
     return insert(text, separator, "prepend");
 };
