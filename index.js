@@ -4,10 +4,12 @@ const PluginError = require('plugin-error');
 
 const PLUGIN_NAME = 'gulp-append-prepend';
 
+function arraify(maybeArr) {
+    return Array.isArray(maybeArr) ? maybeArr : [maybeArr];
+}
+
 function filesGetContents(filepaths) {
-    if (!(filepaths instanceof Array)) {
-        filepaths = [filepaths];
-    }
+    filepaths = arraify(filepaths);
 
     const filesContents = [];
     for (var i = 0; i < filepaths.length; i++) {
@@ -21,9 +23,7 @@ function insert(texts, separator, type) {
         throw new PluginError(PLUGIN_NAME, 'Missing text or path !');
     }
 
-    if (!Array.isArray(texts)) {
-        texts = [texts];
-    }
+    texts = arraify(texts);
 
     if (type !== "append" && type !== "prepend") {
         throw new PluginError(PLUGIN_NAME, 'Missing type !');
