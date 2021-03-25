@@ -23,7 +23,7 @@ function insert(texts, separator, type) {
         throw new PluginError(PLUGIN_NAME, 'Missing text or path !');
     }
 
-    texts = arraify(texts);
+    texts = arrayify(texts);
 
     if (type !== "append" && type !== "prepend") {
         throw new PluginError(PLUGIN_NAME, 'Missing type !');
