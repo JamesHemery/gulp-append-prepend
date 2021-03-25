@@ -9,7 +9,7 @@ function arrayify(obj) {
 }
 
 function filesGetContents(filepaths) {
-    filepaths = arraify(filepaths);
+    filepaths = arrayify(filepaths);
 
     const filesContents = [];
     for (var i = 0; i < filepaths.length; i++) {
