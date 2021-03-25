@@ -4,8 +4,8 @@ const PluginError = require('plugin-error');
 
 const PLUGIN_NAME = 'gulp-append-prepend';
 
-function arraify(maybeArr) {
-    return Array.isArray(maybeArr) ? maybeArr : [maybeArr];
+function arrayify(obj) {
+    return Array.isArray(obj) ? obj : [obj];
 }
 
 function filesGetContents(filepaths) {
