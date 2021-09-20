@@ -14,5 +14,11 @@ export function prependFile(
   filepath: string,
   separator?: string
 ): stream.Transform;
-export function appendText(text: string): stream.Transform;
-export function prependText(text: string): stream.Transform;
+export function appendText(
+  text: string,
+  separator?: string
+): stream.Transform;
+export function prependText(
+  text: string,
+  separator?: string
+): stream.Transform;
