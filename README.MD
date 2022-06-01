@@ -40,4 +40,4 @@ This example works with html but you can use any type of file.
 This plugin is released under the [MIT licence](./LICENCE).
 
 ## Disclaimer
-I am sorry for my poor English. Feel free to make changes in this README.
+Feel free to make changes in this README.
